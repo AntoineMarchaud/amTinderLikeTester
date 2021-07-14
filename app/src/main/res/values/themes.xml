@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AmTinderLikeTester" parent="Theme.MaterialComponents.NoActionBar">
+        <!--   your app branding color for the app bar -->
+        <item name="colorPrimary">@color/white</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/greyscale_black</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- color of the navigation bottom SYSTEM bar  -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- arriere plan -->
+        <item name="android:windowBackground">@color/background_color</item>
+    </style>
+
+
+    <style name="CustomCardViewStyleTop" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlayOnlyTop</item>
+    </style>
+
+    <style name="CustomCardViewStyleBottom" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlayOnlyBottom</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlayOnlyTop" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlayOnlyBottom" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+    </style>
+
+
+    <style name="card_title">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">@color/greyscale_black</item>
+        <item name="fontWeight">800</item>
+    </style>
+
+    <style name="card_name">
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">@color/grey_600</item>
+        <item name="fontWeight">800</item>
+    </style>
+
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_photo" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutPosition"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginHorizontal="38dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardLayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@drawable/shape_bottom_card"
+        android:elevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/rvPhotos">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileNameAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/card_title"
+            app:fontFamily="@font/avenir_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Jessie, 21" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileTown"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            app:fontFamily="@font/avenir_black"
+            android:layout_marginStart="18dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/card_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileNameAge"
+            tools:text="Santa Monica, USA" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profileFlag"
+            android:layout_width="25dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="1dp"
+            android:alpha="0.7"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="8sp"
+            android:src="@drawable/flag"
+            app:layout_constraintBottom_toBottomOf="@+id/profileTown"
+            app:layout_constraintStart_toEndOf="@+id/profileTown"
+            app:layout_constraintTop_toTopOf="@+id/profileTown" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/leftEdge"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rightEdge"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
