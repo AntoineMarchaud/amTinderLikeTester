@@ -1,6 +1,6 @@
 # amTinderLikeTester
 
-An app to testyuyakaido package
+An app to test yuyakaido package
 
 - Kotlin
 - MVVM
